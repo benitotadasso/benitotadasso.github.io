@@ -1,0 +1,65 @@
+.knowledge {
+  background: $blue;
+  color: #fff;
+  padding: 64px 16px;
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+  }
+}
+
+.kwnowledge-container {
+  margin-top: 64px;
+  &__emoji {
+    font-size: 64px;
+    line-height: 64px;
+    display: block;
+    text-align: center;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 44px;
+    text-align: center;
+    margin: 16px 0 24px;
+  }
+}
+
+.knowledge-list {
+  font-style: normal;
+  color: $blueLight;
+  width: 288px;
+  margin: 0 auto; /* tips: hold in the middle */
+  list-style-type: none; /* . removed */
+  padding: 0;
+  &__items {
+    padding: 0 0 0 24px;
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 7px;
+      content: "";
+      width: 12px;
+      height: 9px;
+      background: url("../assets/img/small-tick-green.svg");
+      .knowledge-list--something & {  /* css modifier tick */
+        background: url("../assets/img/small-tick-gray.svg");
+      }
+      .knowledge-list--dot & {
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          top: 10px;
+          left: 5px;
+          background: $blueLight;
+      }
+      display: block;
+    }
+  }
+}
