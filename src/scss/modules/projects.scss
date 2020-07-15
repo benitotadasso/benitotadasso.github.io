@@ -1,0 +1,40 @@
+.projects {
+  padding: 64px 16px 0;
+  &__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: $textDark;
+  }
+  &__paragraph {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 32px;
+    text-align: center;
+    color: $textDeafult;
+    margin-bottom: 46px;
+  }
+}
+
+.window {
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  background: $consoleGrey2;
+  overflow: hidden; /* cutting all like border-radius */
+  &__top {
+    height: 40px;
+    background: $consoleGrey1;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 16px;
+  }
+  &__circle {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: $consoleGrey3;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+}
