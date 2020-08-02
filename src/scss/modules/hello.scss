@@ -4,14 +4,17 @@
     color: $blue;
   }
   &__contact {
-    background: $link;
     border-radius: 64px;
+    background: $link;
     color: #fff;
     display: inline-block;
+    font-weight: bold;
     font-size: 20px;
     line-height: 40px;
     padding: 4px 24px;
     text-decoration: none;
+  }
+  &__description { /* mail bottom centre */
     text-align: center;
   }
   &__hand {
