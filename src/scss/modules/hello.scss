@@ -1,5 +1,9 @@
 .hello {
   padding: 64px 16px 88px;
+  @media (min-width: $tablet) {
+    max-width: 768px;
+    margin: 0 auto; /* nie trzyma się lewej strony */
+  }
   &__blue {
     color: $blue;
   }
@@ -14,15 +18,26 @@
     padding: 4px 24px;
     text-decoration: none;
   }
-  &__description { /* mail bottom centre */
+  &__description {
+    /* mail bottom centre */
     text-align: center;
   }
   &__hand {
     display: none;
+    @media (min-width: $desktop) {
+      display: block;
+      background: $blue;
+      border-radius: 16px;
+      padding: 16px 19px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 32px;
+    }
   }
   &__image {
+    box-sizing: content-box; /* dzięki temu mogę dodać border 16px #f6f9fd; zachowując wielkość elementu */
     border-radius: 50%;
-    border: solid #f6f9fd;
+    border: 16px solid #f6f9fd;
     height: 96px;
     width: 96px;
   }
