@@ -1,11 +1,15 @@
 .knowledge {
   background: $blue;
   color: #fff;
-  padding: 64px 16px;
+  padding: 64px 16px 88px;
+  @media (min-width: $desktop) {
+    padding: 80px 16px 176px;
+  }
   &__title {
     font-weight: bold;
     font-size: 36px;
     line-height: 48px;
+    margin: 0;
     text-align: center;
     @media (min-width: $desktop) {
       font-size: 48px;
@@ -16,14 +20,17 @@
     @media (min-width: $desktop) {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr; /* dzieli na 3 kolumny */
-      max-width: 1184px;  /* max szerokosc, aby sie nie rozjerzaly okna za bardzo */
-      margin: 0 auto;  /* tak aby okna byly 3 rowno w srodku szerokosci 1184px */
+      max-width: 1184px; /* max szerokosc, aby sie nie rozjerzaly okna za bardzo */
+      margin: 0 auto; /* tak aby okna byly 3 rowno w srodku szerokosci 1184px */
     }
   }
 }
 
 .kwnowledge-container {
-  margin-top: 64px;
+  margin-top: 72px;
+  @media (min-width: $desktop) {
+    margin-top: 128px;
+  }
   &__emoji {
     font-size: 64px;
     line-height: 64px;
@@ -60,16 +67,18 @@
       width: 12px;
       height: 9px;
       background: url("../assets/img/small-tick-green.svg");
-      .knowledge-list--something & {  /* css modifier tick */
+      .knowledge-list--something & {
+        /* css modifier tick */
         background: url("../assets/img/small-tick-gray.svg");
       }
-      .knowledge-list--dot & {  /* css modifier tick */
-          width: 2px;
-          height: 2px;
-          border-radius: 50%;
-          top: 10px;
-          left: 5px;
-          background: $blueLight;
+      .knowledge-list--dot & {
+        /* css modifier tick */
+        width: 2px;
+        height: 2px;
+        border-radius: 50%;
+        top: 10px;
+        left: 5px;
+        background: $blueLight;
       }
       display: block;
     }
