@@ -2,7 +2,15 @@
   padding: 64px 16px 88px;
   @media (min-width: $tablet) {
     max-width: 768px;
-    margin: 0 auto; /* nie trzyma się lewej strony */
+    margin: 0 auto;
+  }
+  @media (min-width: $desktop) {
+    max-width: 100%;
+  }
+  &__bubble {
+    position: absolute;
+    left: calc(50% + 100px);
+    top: -8%;
   }
   &__blue {
     color: $blue;
@@ -19,8 +27,29 @@
     text-decoration: none;
   }
   &__description {
-    /* mail bottom centre */
     text-align: center;
+    @media (min-width: $desktop) {
+      max-width: 786px;
+      margin: 0 auto;
+      position: relative;
+      &::before,
+      &::after {
+        width: 83.23px;
+        height: 254.88px;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+      }
+      &::before {
+        background: url("../assets/img/before-left.svg");
+        right: 100%;
+      }
+      &::after {
+        background: url("../assets/img/after-right.svg");
+        left: 100%;
+      }
+    }
   }
   &__hand {
     display: none;
@@ -32,6 +61,17 @@
       color: #fff;
       font-weight: bold;
       font-size: 32px;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        width: 17.42px;
+        height: 22.66px;
+        background: url("../assets/img/hand.svg");
+        position: absolute;
+        top: 99%;
+        left: 32px;
+      }
     }
   }
   &__image {
@@ -40,11 +80,18 @@
     border: 16px solid #f6f9fd;
     height: 96px;
     width: 96px;
+
+    @media (min-width: $desktop) {
+      width: 178px;
+      height: 178px;
+      border: 24px solid #f6f9fd;
+    }
   }
   &__image-container {
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative;
   }
   &__link {
     color: $link;
@@ -58,11 +105,19 @@
     line-height: 32px;
     margin-bottom: 48px;
     text-align: center;
+    @media (min-width: $desktop) {
+      font-size: 20px;
+      line-height: 40px;
+    }
   }
   &__title {
     color: $textDark;
     font-size: 26px;
     line-height: 32px;
     text-align: center;
+    @media (min-width: $desktop) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 }

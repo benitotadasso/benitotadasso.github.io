@@ -9,6 +9,10 @@
     line-height: 48px;
     text-align: center;
     color: $textDark;
+    @media (min-width: $desktop) {
+      font-size: 48px;
+      line-height: 56px;
+    }
   }
   &__paragraph {
     font-weight: 300;
@@ -18,8 +22,13 @@
     font-style: normal;
     color: $textDeafult;
     text-align: center;
+    @media (min-width: $desktop) {
+      font-size: 20px;
+      line-height: 40px;
+    }
   }
-  &__media { /* mail bottom centre */
+  &__media {
+    /* mail bottom centre */
     text-align: center;
   }
 }

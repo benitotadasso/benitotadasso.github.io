@@ -7,6 +7,18 @@
     font-size: 36px;
     line-height: 48px;
     text-align: center;
+    @media (min-width: $desktop) {
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+  &__columns {
+    @media (min-width: $desktop) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* dzieli na 3 kolumny */
+      max-width: 1184px;  /* max szerokosc, aby sie nie rozjerzaly okna za bardzo */
+      margin: 0 auto;  /* tak aby okna byly 3 rowno w srodku szerokosci 1184px */
+    }
   }
 }
 
