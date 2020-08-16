@@ -29,6 +29,8 @@ fetch(
             <span class="window__label">demo:</span>
             <span>
               &lt;<a
+                target="_blank"
+                rel="noopener noreferrer"
                 class="window__link"
                 href="${homepage}"
                 title="${name} - demo"
@@ -41,7 +43,9 @@ fetch(
             <span>
               &lt;<a
                 class="window__link"
-                href="${html_url}" 
+                href="${html_url}"
+                target="_blank"
+                rel="noopener noreferrer"
                 title="${name} - code"
                 >source_code</a
               >&gt;
@@ -49,7 +53,7 @@ fetch(
           </p>
         </div>
       </article>`;
-      if (true) {
+      if (description) {
         container.innerHTML += template;
       }
     }

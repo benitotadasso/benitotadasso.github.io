@@ -7,14 +7,17 @@
 @import "modules/projects.scss";
 @import "modules/contact.scss";
 @import "modules/media.scss";
+@import "modules/hand.scss";
 
 
 
 
 
 
+ 
  html {
      box-sizing: border-box;
+     scroll-behavior: smooth; /* smooth scrolling (plynne przewijanie pomiedzy np. hotwicami) */ 
  }
 
  *,
