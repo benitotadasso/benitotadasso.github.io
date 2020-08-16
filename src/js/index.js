@@ -1,5 +1,8 @@
 import "../scss/main.scss";
 
+console.log(Hi);
+
+
 fetch(
   "https://api.github.com/users/benitotadasso/repos?sort=created&direction=asc"
 )
@@ -41,7 +44,7 @@ fetch(
             <span>
               &lt;<a
                 class="window__link"
-                href="${html_url}"
+                href="${html_url}" 
                 title="${name} - code"
                 >source_code</a
               >&gt;
