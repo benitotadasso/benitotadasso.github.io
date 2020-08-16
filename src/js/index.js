@@ -1,8 +1,5 @@
 import "../scss/main.scss";
 
-console.log(Hi);
-
-
 fetch(
   "https://api.github.com/users/benitotadasso/repos?sort=created&direction=asc"
 )
