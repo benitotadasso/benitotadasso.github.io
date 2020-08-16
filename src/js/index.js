@@ -16,7 +16,7 @@ fetch(
           <span class="window__circle"></span>
         </div>
         <div class="window__content">
-          <img src="../assets/img/github.svg" alt="" />
+          <img src="img/github.svg" alt="logo github" />
           <h3 class="window__title window__grid">
             <span class="window__label">project:</span>
             <span>${name}</span>
@@ -49,7 +49,7 @@ fetch(
           </p>
         </div>
       </article>`;
-      if (description) {
+      if (true) {
         container.innerHTML += template;
       }
     }
